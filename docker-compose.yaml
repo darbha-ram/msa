@@ -1,0 +1,20 @@
+version: '2'
+services:
+  db:
+    image: mongo:3.0.11
+    ports:
+      - 27017:27017
+  web:
+    build: .
+    image: msa_com
+    links:
+      - db:mydbalias
+    command: node index.js
+    volumes:
+      - .:/usr/src/msgstoreapp
+    ports:
+      - 8081:8081
+    environment:
+      PORT: 8081 # express can use process.env.PORT
+      COMPOSE_DB_HOST: mydbalias
+

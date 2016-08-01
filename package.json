@@ -1,0 +1,22 @@
+{
+  "name": "msgstoreapp",
+  "version": "1.0.0",
+  "description": "Node.js message store app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "Ram D.",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.16"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "request": "^2.72.0"
+  }
+}
